@@ -1,0 +1,37 @@
+version: '3.7'
+services:
+  php-apache-environment:
+    container_name: php-apache
+    build:
+      context: ./php
+      dockerfile: Dockerfile
+    depends_on:
+      - db
+    volumes:
+      - ./php/src:/var/www/html/
+    ports:
+      - 8000:80
+  
+  db:
+    container_name: db
+    image: mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: UFVGeHCRaBJO0gzK1KG2
+      MYSQL_DATABASE: db
+      MYSQL_USER: mysqluser
+      MYSQL_PASSWORD: UFVGeHCRaBJO0gzK1KG2
+    volumes:
+      - /home/briscoe/database/:/var/lib/mysql
+    ports:
+      - "9906:33060"
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    ports:
+      - '8080:80'
+    restart: always
+    environment:
+      PMA_HOST: db
+    depends_on:
+      - db
