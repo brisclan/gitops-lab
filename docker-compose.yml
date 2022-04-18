@@ -22,7 +22,7 @@ services:
       MYSQL_USER: ${MYSQL_USER}
       MYSQL_PASSWORD: ${MYSQL_PASSWORD}
     volumes:
-      - /home/briscoe/database/:/var/lib/mysql
+      - ${MYSQL_DATABASE_LOCALDIR}:/var/lib/mysql
     ports:
       - "9906:33060"
 
