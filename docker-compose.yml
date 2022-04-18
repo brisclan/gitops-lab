@@ -17,10 +17,10 @@ services:
     image: mysql
     restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: UFVGeHCRaBJO0gzK1KG2
+      MYSQL_ROOT_PASSWORD: ${MYSQL_PASSWORD}
       MYSQL_DATABASE: db
       MYSQL_USER: mysqluser
-      MYSQL_PASSWORD: UFVGeHCRaBJO0gzK1KG2
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
     volumes:
       - /home/briscoe/database/:/var/lib/mysql
     ports:
