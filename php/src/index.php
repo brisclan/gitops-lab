@@ -1,9 +1,4 @@
 <?php
-//$host = 'db';
-//$user = 'mysqluser';
-//$pass = 'UFVGeHCRaBJO0gzK1KG2';
-//$mydatabase = 'db';
-//$conn = new mysqli($host, $user, $pass, $mydatabase);
 include('config.php');
 // select query
 $sql = 'SELECT * FROM users';
