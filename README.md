@@ -4,5 +4,5 @@ Gitops lab:
 
 TODO:
 2. Github Actions
-3. ??
+3. pipeline
 
