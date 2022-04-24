@@ -3,5 +3,5 @@ Gitops lab:
 1. Docker compose file that brings up phpmyadmin, mysql db, and php:apache
 
 TODO:
-2. Github Actions
+2. Github Workflow items
 3. Pipeline
